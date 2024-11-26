@@ -8,6 +8,7 @@ model = load_model('cats_vs_dogs_model.h5')
 
 # Streamlit UI
 st.title('Cats vs. Dogs Classifier')
+st.image("images.jpeg, use_column_width=True)
 st.write("Upload a JPG image, and let the AI classify it as a Cat or a Dog!")
 
 # Upload an image
@@ -18,7 +19,7 @@ if uploaded_file is not None:
     st.image(uploaded_file, caption='Uploaded Image', use_column_width=True)
     
     # Preprocess the image
-    img = image.load_img(uploaded_file, target_size=(180, 180))
+    img = image.load_img(uploaded_file, target_size=(90, 90))
     img_array = image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0) / 255.0  # Normalize
 
