@@ -19,7 +19,7 @@ if uploaded_file is not None:
     st.image(uploaded_file, caption='Uploaded Image', use_column_width=True)
     
     # Preprocess the image
-    img = image.load_img(uploaded_file, target_size=(90, 90))
+    img = image.load_img(uploaded_file, target_size=(180, 180))
     img_array = image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0) / 255.0  # Normalize
 
