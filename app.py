@@ -7,8 +7,8 @@ import numpy as np
 model = load_model('cats_vs_dogs_model.h5')
 
 # Streamlit UI
-st.title('Cats vs. Dogs Classifier')
 st.image("images.jpeg", use_column_width=True)
+st.title('Cats vs. Dogs Classifier')
 st.write("Upload a JPG image, and let the AI classify it as a Cat or a Dog!")
 
 # Upload an image
